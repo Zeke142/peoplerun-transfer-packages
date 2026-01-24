@@ -1,0 +1,67 @@
+name: Freeze Guard (No Executables / No Secrets)
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enforce canonical roots exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          for d in hard-surfaces build-docs registry ops; do
+            test -d "$d" || (echo "Missing required folder: $d" && exit 1)
+          done
+
+      - name: Block executable / code filetypes (fail-closed)
+        shell: bash
+        run: |
+          set -euo pipefail
+          DENY_EXT_REGEX='\.(sh|bash|zsh|py|js|ts|tsx|jsx|php|rb|go|rs|java|kt|swift|c|cc|cpp|h|hpp|cs|ps1|bat|cmd|exe|dll|so|dylib|jar|class|wasm)$'
+          FOUND="$(git ls-files | grep -E "${DENY_EXT_REGEX}" || true)"
+          if [ -n "$FOUND" ]; then
+            echo "Blocked executable/code files detected:"
+            echo "$FOUND"
+            exit 1
+          fi
+
+      - name: Block SVG/HTML (scriptable surfaces)
+        shell: bash
+        run: |
+          set -euo pipefail
+          FOUND="$(git ls-files | grep -E '\.(svg|html|htm)$' || true)"
+          if [ -n "$FOUND" ]; then
+            echo "Blocked scriptable filetypes detected (.svg/.html):"
+            echo "$FOUND"
+            exit 1
+          fi
+
+      - name: Secret scan (high-signal patterns)
+        shell: bash
+        run: |
+          set -euo pipefail
+          PATTERNS=(
+            "AKIA[0-9A-Z]{16}"
+            "-----BEGIN (RSA|EC|OPENSSH) PRIVATE KEY-----"
+            "xox[baprs]-[0-9A-Za-z-]{10,}"
+            "sk-[A-Za-z0-9]{20,}"
+          )
+          FILES="$(git ls-files | grep -E '\.(md|txt|json|jsonl|ya?ml)$' || true)"
+          for p in "${PATTERNS[@]}"; do
+            if [ -n "$FILES" ] && grep -RInE --binary-files=without-match "$p" $FILES; then
+              echo "Potential secret detected by pattern: $p"
+              exit 1
+            fi
+          done
