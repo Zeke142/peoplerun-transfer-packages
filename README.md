@@ -29,11 +29,11 @@ Hard surfaces override memory. Memory may never override hard surfaces.
 - `ops/`
 
 ## Freeze-Safety Rules (Fail-Closed)
+- All changes via PR + required checks
 - No direct pushes to protected branch
 - No force pushes / no history rewrites
 - No executable languages committed
 - No secrets committed
-- All changes via PR + required checks
 
 ## Tagging (Immutable)
 Frozen states must be recorded via immutable annotated tags:
