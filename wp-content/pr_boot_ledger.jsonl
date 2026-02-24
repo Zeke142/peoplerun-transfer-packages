@@ -1,0 +1,4 @@
+{"path":"/home/customer/www/peoplerun.ai/public_html/wp-content/mu-plugins/00-pr-gh-env-loader.php","phase":"CAPABILITY","mode":"require_once"}
+{"path":"/home/customer/www/peoplerun.ai/public_html/wp-content/mu-plugins/98-pr-github-emitter-shim.php","phase":"CAPABILITY","mode":"require_once"}
+{"path":"/home/customer/www/peoplerun.ai/public_html/wp-content/mu-plugins/pr-github-emitter.php","phase":"CAPABILITY","mode":"require_once"}
+{"path":"/home/customer/www/peoplerun.ai/public_html/wp-content/mu-plugins/zz-pr-github-emitter-safe.php","phase":"CAPABILITY","mode":"require_once"}
