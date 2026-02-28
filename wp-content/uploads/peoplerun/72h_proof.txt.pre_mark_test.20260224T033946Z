@@ -1,0 +1,15 @@
+PeopleRun 72-hour Proof
+Window start (UTC): 2026-02-24T02:32:00Z
+Samples in window: 4
+First sample ts: 2026-02-24T02:32:55Z
+Last  sample ts: 2026-02-24T03:16:52Z
+boot_ok false count: 0
+emissions_count min: 0
+emissions_count max: 1
+emissions delta: 1
+first ledger_sha: 98b144cbdfe1f5e48e1e61476a993aacd8b17c61
+last  ledger_sha: TEST_LEDGER_1771903012
+first proof_time: 2026-02-24T02:28:12+00:00
+last  proof_time: 2026-02-24T03:16:52Z
+
+RESULT: PASS — emissions_count increased during the window.

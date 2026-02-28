@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://peoplerun.ai/wp-sitemap.xml

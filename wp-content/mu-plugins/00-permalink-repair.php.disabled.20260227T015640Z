@@ -1,0 +1,63 @@
+<?php
+/*
+Plugin Name: PeopleRun Permalink Repair (MU)
+Description: On 404, attempt to resolve requested path to a post/page by trying slug variants. Reversible: remove file to disable.
+Version: 1.0
+Author: PeopleRun AI
+*/
+
+add_action('template_redirect', function() {
+    if ( ! is_404() ) return;
+
+    $req = $_SERVER['REQUEST_URI'] ?? '';
+    $req = preg_replace('#\?.*$#', '', $req);
+    $path = trim($req, "/ \t\n\r\0\x0B");
+    if ($path === '') return;
+
+    $candidates = array($path, rawurldecode($path));
+    $candidates[] = preg_replace('/[^A-Za-z0-9\-\/]+/', '-', iconv('UTF-8', 'ASCII//TRANSLIT', rawurldecode($path)));
+    if (strpos($path,'/')!==false) $candidates[] = end(explode('/', $path));
+
+    $candidates = array_values(array_unique(array_filter($candidates)));
+    $log_base = WP_CONTENT_DIR . '/uploads/peoplerun/recover_reports';
+    if (!file_exists($log_base)) @mkdir($log_base,0755,true);
+    $logfile = $log_base . '/mu_resolve_log.txt';
+
+    foreach ($candidates as $cand) {
+        $post = get_page_by_path($cand, OBJECT, array('page','post','attachment','any'));
+        if ($post) {
+            status_header(200);
+            global $wp_query;
+            $wp_query->is_404 = false;
+            $wp_query->is_singular = true;
+            $wp_query->queried_object = $post;
+            $wp_query->posts = array($post);
+            $wp_query->post = $post;
+            setup_postdata($post);
+            @file_put_contents($logfile, date('c')." RESOLVED id={$post->ID} candidate={$cand} requested_path={$path}\n", FILE_APPEND|LOCK_EX);
+            include( get_query_template('single') ?: get_query_template('page') ?: ABSPATH . 'wp-includes/template-loader.php' );
+            exit;
+        } else {
+            global $wpdb;
+            $p = $wpdb->get_row( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_name = %s LIMIT 1", $cand ) );
+            if ($p) {
+                $post = get_post($p->ID);
+                if ($post) {
+                    status_header(200);
+                    global $wp_query;
+                    $wp_query->is_404 = false;
+                    $wp_query->is_singular = true;
+                    $wp_query->queried_object = $post;
+                    $wp_query->posts = array($post);
+                    $wp_query->post = $post;
+                    setup_postdata($post);
+                    @file_put_contents($logfile, date('c')." RESOLVED_DB id={$post->ID} candidate={$cand} requested_path={$path}\n", FILE_APPEND|LOCK_EX);
+                    include( get_query_template('single') ?: get_query_template('page') ?: ABSPATH . 'wp-includes/template-loader.php' );
+                    exit;
+                }
+            }
+        }
+    }
+
+    @file_put_contents($logfile, date('c')." NOT_RESOLVED requested_path={$path} candidates=".implode('|',$candidates)."\n", FILE_APPEND|LOCK_EX);
+}, 0);

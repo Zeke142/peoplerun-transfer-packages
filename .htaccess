@@ -1,0 +1,19 @@
+# BEGIN PeopleRun — sitemap passthrough (preserved)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} ^/(sitemap_index\.xml|wp-sitemap\.xml|wp-sitemap(-index)?\.xsl|wp-sitemap.*\.xml)$ [NC]
+  RewriteRule ^ /index.php [L,QSA]
+</IfModule>
+# END PeopleRun — sitemap passthrough
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+# add a directory index fallback to allow front controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress

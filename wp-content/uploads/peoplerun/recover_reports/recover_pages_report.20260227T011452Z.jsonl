@@ -1,0 +1,9 @@
+{"ts":"20260227T011452Z","action":"db_backup_created","path":"/home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_reports/db_backup.20260227T011452Z.sql.gz"}
+{"ts":"20260227T011452Z","action":"pages_listed","path":"/home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_reports/all_pages.20260227T011452Z.json"}
+{"ts":"20260227T011452Z","action":"non_published_ids_collected","path":"/home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_reports/non_published_ids.20260227T011452Z.txt","count":0}
+{"ts":"20260227T011452Z","action":"no_non_published_found"}
+{"ts":"20260227T011452Z","action":"rewrite_and_cache_flushed"}
+{"ts":"20260227T011452Z","action":"sitemap_temp_written","path":"/home/customer/www/peoplerun.ai/public_html/sitemap_index.xml.tmp"}
+{"ts":"20260227T011452Z","summary":{"total_pages":182,"published":182,"non_published_before":0}}
+{"ts":"20260227T011452Z","action":"marker_touched","path":"/home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_pages_done.20260227T011452Z.marker"}
+{"ts":"20260227T011452Z","action":"recover_pages_complete","report":"/home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_reports/recover_pages_report.20260227T011452Z.jsonl","log":"/home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_reports/recover_pages_log.20260227T011452Z.txt"}

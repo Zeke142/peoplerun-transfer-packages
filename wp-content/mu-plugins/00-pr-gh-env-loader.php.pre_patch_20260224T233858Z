@@ -1,0 +1,2 @@
+<?php
+putenv('PR_GITHUB_TOKEN='.trim(file_get_contents(getenv('HOME').'/.pr_github_token')));

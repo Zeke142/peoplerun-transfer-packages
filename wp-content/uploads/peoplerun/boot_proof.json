@@ -1,0 +1,8 @@
+{
+    "ok": true,
+    "message": "Boot completed successfully.",
+    "time_utc": "2026-02-28T01:00:49+00:00",
+    "phase": "EXECUTION",
+    "ledger_sha1": "98b144cbdfe1f5e48e1e61476a993aacd8b17c61",
+    "ledger_mtime": "2026-02-24T01:13:12+00:00"
+}

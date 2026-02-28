@@ -1,0 +1,1201 @@
+ts,id,slug,title,post_status,guid,post_name,post_type,permalink,attempted_url,http_code,effective_url,response_headers
+20260227T012321Z,1615,"smoke-test-publisher-intent","SMOKE TEST — Publisher Intent","publish","https://peoplerun.ai/?page_id=1615","smoke-test-publisher-intent","page","https://peoplerun.ai/smoke-test-publisher-intent/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:22 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/smoke-test-publisher-intent/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:22 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/smoke-test-publisher-intent/"
+20260227T012321Z,1665,"1665-2","","publish","https://peoplerun.ai/?page_id=1665","1665-2","page","https://peoplerun.ai/1665-2/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:23 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/1665-2/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:23 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/1665-2/"
+20260227T012321Z,1661,"untitled-2","Untitled","publish","https://peoplerun.ai/untitled-2/","untitled-2","page","https://peoplerun.ai/untitled-2/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:26 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/untitled-2/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:26 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/untitled-2/"
+20260227T012321Z,1655,"operate-clarity","Clarity — Operate Mode","publish","https://peoplerun.ai/operate-clarity/","operate-clarity","page","https://peoplerun.ai/operate-clarity/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:28 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/operate-clarity/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:28 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/operate-clarity/"
+20260227T012321Z,1652,"orientation-layer-first-system-build","💎 Orientation Layer — First System Build","publish","https://peoplerun.ai/orientation-layer-first-system-build/","orientation-layer-first-system-build","page","https://peoplerun.ai/orientation-layer-first-system-build/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:29 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/orientation-layer-first-system-build/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:29 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/orientation-layer-first-system-build/"
+20260227T012321Z,1617,"social-media-engine-operator-manual","PeopleRun AI — Social Media Engine Operator Manual","publish","https://peoplerun.ai/social-media-engine-operator-manual/","social-media-engine-operator-manual","page","https://peoplerun.ai/social-media-engine-operator-manual/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:30 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/social-media-engine-operator-manual/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:30 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/social-media-engine-operator-manual/"
+20260227T012321Z,1613,"social-engine-registry-workflow-v1","PeopleRun AI — Social Engine Registry Workflow v1.0","publish","https://peoplerun.ai/social-engine-registry-workflow-v1/","social-engine-registry-workflow-v1","page","https://peoplerun.ai/social-engine-registry-workflow-v1/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:31 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/social-engine-registry-workflow-v1/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:31 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/social-engine-registry-workflow-v1/"
+20260227T012321Z,1611,"surface-drift-audit-runner-v1","PeopleRun AI — Surface Drift Audit Runner v1.0","publish","https://peoplerun.ai/surface-drift-audit-runner-v1/","surface-drift-audit-runner-v1","page","https://peoplerun.ai/surface-drift-audit-runner-v1/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:32 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/surface-drift-audit-runner-v1/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:32 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/surface-drift-audit-runner-v1/"
+20260227T012321Z,1609,"prwp-wp-cli-wrapper-hard-surface-v1","PeopleRun AI — PRWP WP-CLI Wrapper Hard Surface v1.0","publish","https://peoplerun.ai/prwp-wp-cli-wrapper-hard-surface-v1/","prwp-wp-cli-wrapper-hard-surface-v1","page","https://peoplerun.ai/prwp-wp-cli-wrapper-hard-surface-v1/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:33 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/prwp-wp-cli-wrapper-hard-surface-v1/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:33 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/prwp-wp-cli-wrapper-hard-surface-v1/"
+20260227T012321Z,1607,"open-shop-execution-contract-v1-1","PeopleRun AI — Open Shop Execution Contract v1.1","publish","https://peoplerun.ai/open-shop-execution-contract-v1-1-2/","open-shop-execution-contract-v1-1","page","https://peoplerun.ai/open-shop-execution-contract-v1-1/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:34 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/open-shop-execution-contract-v1-1/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:34 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/open-shop-execution-contract-v1-1/"
+20260227T012321Z,1605,"open-shop-execution-contract-v1","PeopleRun AI — Open Shop Execution Contract v1.0","publish","http://peoplerun.ai/open-shop-execution-contract-v1/","open-shop-execution-contract-v1","page","https://peoplerun.ai/open-shop-execution-contract-v1/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:35 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/open-shop-execution-contract-v1/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:35 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/open-shop-execution-contract-v1/"
+20260227T012321Z,1585,"activation-queue","PeopleRun AI — Activation Queue","publish","http://peoplerun.ai/activation-queue/","activation-queue","page","https://peoplerun.ai/activation-queue/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:36 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/activation-queue/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:36 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/activation-queue/"
+20260227T012321Z,1577,"global-mutation-guard-v1","💎 PeopleRun AI — Global Mutation Guard v1","publish","https://peoplerun.ai/global-mutation-guard-v1/","global-mutation-guard-v1","page","https://peoplerun.ai/global-mutation-guard-v1/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:38 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/global-mutation-guard-v1/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:38 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/global-mutation-guard-v1/"
+20260227T012321Z,1575,"intelligence-authority-ledger-v1","💎 PeopleRun AI — Intelligence Authority Ledger v2","publish","https://peoplerun.ai/intelligence-authority-ledger-v1/","intelligence-authority-ledger-v1","page","https://peoplerun.ai/intelligence-authority-ledger-v1/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:39 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/intelligence-authority-ledger-v1/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:39 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/intelligence-authority-ledger-v1/"
+20260227T012321Z,1565,"hard-surface-entry","Hard Surface Entry","publish","http://peoplerun.ai/hard-surface-entry/","hard-surface-entry","page","https://peoplerun.ai/hard-surface-entry/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:40 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/hard-surface-entry/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:40 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/hard-surface-entry/"
+20260227T012321Z,1368,"peoplerun-os-canonical-indices-2","[HOLD] peoplerun-os-canonical-indices (draft->private 1368)","publish","https://peoplerun.ai/?page_id=1368","peoplerun-os-canonical-indices-2","page","https://peoplerun.ai/peoplerun-os-canonical-indices-2/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:41 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-canonical-indices-2/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:41 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-canonical-indices-2/"
+20260227T012321Z,1534,"canonical-indices-hub","Canonical Indices Hub","publish","http://peoplerun.ai/canonical-indices-hub/","canonical-indices-hub","page","https://peoplerun.ai/canonical-indices-hub/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:42 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-indices-hub/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:42 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-indices-hub/"
+20260227T012321Z,1513,"canonical-structure-in-practice-issue-15","[HOLD] Canonical Structure, In Practice — Issue 15 (draft->private 1513)","publish","http://peoplerun.ai/?page_id=1513","canonical-structure-in-practice-issue-15","page","https://peoplerun.ai/canonical-structure-in-practice-issue-15/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:44 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-15/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:44 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-15/"
+20260227T012321Z,1511,"canonical-structure-in-practice-issue-14","[HOLD] Canonical Structure, In Practice — Issue 14 (draft->private 1511)","publish","http://peoplerun.ai/?page_id=1511","canonical-structure-in-practice-issue-14","page","https://peoplerun.ai/canonical-structure-in-practice-issue-14/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:45 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-14/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:45 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-14/"
+20260227T012321Z,1508,"canonical-structure-in-practice-issue-13","[ISSUE] Canonical Structure, In Practice Issue 13","publish","http://peoplerun.ai/?page_id=1508","canonical-structure-in-practice-issue-13","page","https://peoplerun.ai/canonical-structure-in-practice-issue-13/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:47 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-13/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:47 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-13/"
+20260227T012321Z,1507,"release-registry","PeopleRun AI — Release Registry","publish","http://peoplerun.ai/release-registry/","release-registry","page","https://peoplerun.ai/release-registry/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:48 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/release-registry/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:48 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/release-registry/"
+20260227T012321Z,1506,"newsletter-archives","[INDEX] PeopleRun AI — Newsletter Archives","publish","http://peoplerun.ai/newsletter-archives/","newsletter-archives","page","https://peoplerun.ai/newsletter-archives/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:49 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/newsletter-archives/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:49 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/newsletter-archives/"
+20260227T012321Z,979,"canonical-structure-in-practice-newsletter-index","[INDEX] Canonical Structure, In Practice — Newsletter Index","publish","https://peoplerun.ai/canonical-structure-in-practice-newsletter-index-2/","canonical-structure-in-practice-newsletter-index","page","https://peoplerun.ai/canonical-structure-in-practice-newsletter-index/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:50 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-newsletter-index/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:50 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-newsletter-index/"
+20260227T012321Z,1472,"canonical-structure-in-practice-issue-12-2-dupe-20260202t044351z","[ARCHIVE] Newsletter Issue Dupe (1472) — DO NOT LINK","publish","https://peoplerun.ai/canonical-structure-in-practice-issue-12-2/","canonical-structure-in-practice-issue-12-2-dupe-20260202t044351z","page","https://peoplerun.ai/canonical-structure-in-practice-issue-12-2-dupe-20260202t044351z/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:51 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-12-2-dupe-20260202t044351z/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:51 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-12-2-dupe-20260202t044351z/"
+20260227T012321Z,1466,"canonical-structure-in-practice-newsletter-index-2","[ARCHIVE] Canonical Structure, In Practice — Newsletter Index (dup 1466)","publish","https://peoplerun.ai/canonical-structure-in-practice-newsletter-index-2/","canonical-structure-in-practice-newsletter-index-2","page","https://peoplerun.ai/canonical-structure-in-practice-newsletter-index-2/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:52 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-newsletter-index-2/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:52 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-newsletter-index-2/"
+20260227T012321Z,1487,"canonical-structure-in-practice-newsletter-index-3","[ARCHIVE] Canonical Structure, In Practice — Newsletter Index (dup 1487)","publish","https://peoplerun.ai/canonical-structure-in-practice-newsletter-index-3/","canonical-structure-in-practice-newsletter-index-3","page","https://peoplerun.ai/canonical-structure-in-practice-newsletter-index-3/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:53 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-newsletter-index-3/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:53 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-newsletter-index-3/"
+20260227T012321Z,1470,"canonical-structure-in-practice-issue-12","[ISSUE] Canonical Structure, In Practice Issue 12","publish","https://peoplerun.ai/canonical-structure-in-practice-issue-12/","canonical-structure-in-practice-issue-12","page","https://peoplerun.ai/canonical-structure-in-practice-issue-12/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:54 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-12/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:54 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-12/"
+20260227T012321Z,1467,"decommissioned-canonical-structure-duplicate","[DECOMMISSIONED] Canonical Structure — Duplicate","publish","https://peoplerun.ai/?page_id=1467","decommissioned-canonical-structure-duplicate","page","https://peoplerun.ai/decommissioned-canonical-structure-duplicate/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:55 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/decommissioned-canonical-structure-duplicate/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:55 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/decommissioned-canonical-structure-duplicate/"
+20260227T012321Z,1465,"peoplerun-ai-control-surface-canonical-structure","[CONTROL] PeopleRun AI — Control Surface — Canonical Structure","publish","https://peoplerun.ai/peoplerun-ai-control-surface-canonical-structure/","peoplerun-ai-control-surface-canonical-structure","page","https://peoplerun.ai/peoplerun-ai-control-surface-canonical-structure/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:57 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-ai-control-surface-canonical-structure/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:57 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-ai-control-surface-canonical-structure/"
+20260227T012321Z,364,"router-x","PeopleRun AI — Control Surface — Router X","publish","https://peoplerun.ai/?page_id=364","router-x","page","https://peoplerun.ai/router-x/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:59 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/router-x/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:59 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/router-x/"
+20260227T012321Z,1460,"peoplerun-ai-control-surface-registry","PeopleRun AI — Control Surface Registry","publish","https://peoplerun.ai/peoplerun-ai-control-surface-registry/","peoplerun-ai-control-surface-registry","page","https://peoplerun.ai/peoplerun-ai-control-surface-registry/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:01 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-ai-control-surface-registry/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:01 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-ai-control-surface-registry/"
+20260227T012321Z,1461,"redirect-control-surface-registry","[ARCHIVE] Redirect: Control Surface Registry (redirect->private 1461)","publish","https://peoplerun.ai/redirect-control-surface-registry/","redirect-control-surface-registry","page","https://peoplerun.ai/redirect-control-surface-registry/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:02 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/redirect-control-surface-registry/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:02 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/redirect-control-surface-registry/"
+20260227T012321Z,1458,"public-signal-learning-loop-psll","Public Signal Learning Loop (PSLL)","publish","https://peoplerun.ai/public-signal-learning-loop-psll/","public-signal-learning-loop-psll","page","https://peoplerun.ai/public-signal-learning-loop-psll/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:03 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/public-signal-learning-loop-psll/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:03 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/public-signal-learning-loop-psll/"
+20260227T012321Z,1452,"indices-redirect","[ARCHIVE] Indices (Redirect) (redirect->private 1452)","publish","https://peoplerun.ai/indices-redirect/","indices-redirect","page","https://peoplerun.ai/indices-redirect/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:04 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/indices-redirect/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:04 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/indices-redirect/"
+20260227T012321Z,1448,"peoplerun-ai-social-analytics","PeopleRun AI — Social Analytics","publish","https://peoplerun.ai/peoplerun-ai-social-analytics/","peoplerun-ai-social-analytics","page","https://peoplerun.ai/peoplerun-ai-social-analytics/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:05 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-ai-social-analytics/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:05 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-ai-social-analytics/"
+20260227T012321Z,1411,"canonical-structure-in-practice-issue-11","Canonical Structure, In Practice Issue 11","publish","https://peoplerun.ai/?page_id=1411","canonical-structure-in-practice-issue-11","page","https://peoplerun.ai/canonical-structure-in-practice-issue-11/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:06 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-11/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:06 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/canonical-structure-in-practice-issue-11/"
+20260227T012321Z,1419,"newsletter-issues-inventory","Newsletter Issues Inventory","publish","https://peoplerun.ai/newsletter-issues-inventory/","newsletter-issues-inventory","page","https://peoplerun.ai/newsletter-issues-inventory/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:07 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/newsletter-issues-inventory/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:07 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/newsletter-issues-inventory/"
+20260227T012321Z,1410,"hr-style-surface","HR Style Surface","publish","https://peoplerun.ai/hr-style-surface/","hr-style-surface","page","https://peoplerun.ai/hr-style-surface/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:08 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/hr-style-surface/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:08 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/hr-style-surface/"
+20260227T012321Z,1367,"peoplerun-os-canonical-indices","PeopleRun OS — Canonical Indices","publish","https://peoplerun.ai/peoplerun-os-canonical-indices-2/","peoplerun-os-canonical-indices","page","https://peoplerun.ai/peoplerun-os-canonical-indices/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:09 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-canonical-indices/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:09 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-canonical-indices/"
+20260227T012321Z,1366,"peoplerun-os-tour-proof-ledger","PeopleRun OS — Tour Proof Ledger","publish","https://peoplerun.ai/peoplerun-os-tour-proof-ledger/","peoplerun-os-tour-proof-ledger","page","https://peoplerun.ai/peoplerun-os-tour-proof-ledger/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:10 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-tour-proof-ledger/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:10 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-tour-proof-ledger/"
+20260227T012321Z,1365,"peoplerun-os-public-tour","PeopleRun OS — Public Tour","publish","https://peoplerun.ai/peoplerun-os-public-tour/","peoplerun-os-public-tour","page","https://peoplerun.ai/peoplerun-os-public-tour/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:11 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-public-tour/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:11 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-public-tour/"
+20260227T012321Z,1359,"phase-iv-proof-exit","Phase IV — Proof Exit","publish","https://peoplerun.ai/?page_id=1359","phase-iv-proof-exit","page","https://peoplerun.ai/phase-iv-proof-exit/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:13 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/phase-iv-proof-exit/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:13 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/phase-iv-proof-exit/"
+20260227T012321Z,1355,"authoritative-input-node-ain-1-contract","[ARCHIVE] Authoritative Input Node (AIN-1) — Contract (unlinked->private 1355)","publish","https://peoplerun.ai/authoritative-input-node-ain-1-contract/","authoritative-input-node-ain-1-contract","page","https://peoplerun.ai/authoritative-input-node-ain-1-contract/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:14 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/authoritative-input-node-ain-1-contract/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:14 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/authoritative-input-node-ain-1-contract/"
+20260227T012321Z,1347,"untitled","[ARCHIVE] Hard Surface Entry (old slug=untitled 1347)","publish","https://peoplerun.ai/untitled/","untitled","page","https://peoplerun.ai/untitled/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:15 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/untitled/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:15 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/untitled/"
+20260227T012321Z,961,"system-map","PeopleRun OS — System Map","publish","https://peoplerun.ai/system-map/","system-map","page","https://peoplerun.ai/system-map/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:18 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/system-map/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:18 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/system-map/"
+20260227T012321Z,1341,"boot-hub","Boot Hub","publish","https://peoplerun.ai/boot-hub/","boot-hub","page","https://peoplerun.ai/boot-hub/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:20 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/boot-hub/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:20 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/boot-hub/"
+20260227T012321Z,1340,"phase-iv-the-one-inevitable-move","Phase IV — The One Inevitable Move","publish","https://peoplerun.ai/phase-iv-the-one-inevitable-move/","phase-iv-the-one-inevitable-move","page","https://peoplerun.ai/phase-iv-the-one-inevitable-move/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:21 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/phase-iv-the-one-inevitable-move/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:21 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/phase-iv-the-one-inevitable-move/"
+20260227T012321Z,1339,"peoplerun-os-surface-candidates-registry","PeopleRun OS — Surface Candidates Registry","publish","https://peoplerun.ai/peoplerun-os-surface-candidates-registry/","peoplerun-os-surface-candidates-registry","page","https://peoplerun.ai/peoplerun-os-surface-candidates-registry/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:22 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-surface-candidates-registry/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:24:22 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/peoplerun-os-surface-candidates-registry/"

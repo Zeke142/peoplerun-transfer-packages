@@ -1,0 +1,8 @@
+DB backup saved to /home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_reports/db_backup.20260227T011452Z.sql.gz
+All pages listed: /home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_reports/all_pages.20260227T011452Z.json
+Non-published IDs written to /home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_reports/non_published_ids.20260227T011452Z.txt
+No non-published pages found.
+Rewrite rules flushed; cache cleared.
+Sitemap temp written to /home/customer/www/peoplerun.ai/public_html/sitemap_index.xml.tmp
+Summary: total=182 published=182 non_published_before=0
+Marker touched: /home/customer/www/peoplerun.ai/public_html/wp-content/uploads/peoplerun/recover_pages_done.20260227T011452Z.marker

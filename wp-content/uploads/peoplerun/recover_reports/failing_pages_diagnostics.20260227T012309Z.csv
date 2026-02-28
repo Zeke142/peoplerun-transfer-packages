@@ -1,0 +1,76 @@
+ts,id,slug,title,post_status,guid,post_name,post_type,permalink,attempted_url,http_code,effective_url,response_headers
+20260227T012309Z,1615,"smoke-test-publisher-intent","SMOKE TEST — Publisher Intent","publish","https://peoplerun.ai/?page_id=1615","smoke-test-publisher-intent","page","https://peoplerun.ai/smoke-test-publisher-intent/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:10 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/smoke-test-publisher-intent/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:10 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/smoke-test-publisher-intent/"
+20260227T012309Z,1665,"1665-2","","publish","https://peoplerun.ai/?page_id=1665","1665-2","page","https://peoplerun.ai/1665-2/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:11 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/1665-2/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:11 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-312v
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/1665-2/"
+20260227T012309Z,1661,"untitled-2","Untitled","publish","https://peoplerun.ai/untitled-2/","untitled-2","page","https://peoplerun.ai/untitled-2/","","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:13 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/untitled-2/","HTTP/2 404 
+server: nginx
+date: Fri, 27 Feb 2026 01:23:13 GMT
+content-type: text/html
+vary: Accept-Encoding
+x-httpd: 1
+x-cdn-c: static
+x-sg-cdn: 1
+x-ce: us-west1-r8gl
+x-proxy-cache-info: DT:1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+
+||404||https://peoplerun.ai/untitled-2/"

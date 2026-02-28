@@ -1,0 +1,4 @@
+{"ts": "2026-02-24T02:32:55Z", "boot_ok": true, "proof_time": "2026-02-24T02:28:12+00:00", "ledger_sha": "98b144cbdfe1f5e48e1e61476a993aacd8b17c61", "emissions_count": 0}
+{"ts": "2026-02-24T02:36:17Z", "boot_ok": true, "proof_time": "2026-02-24T02:33:12+00:00", "ledger_sha": "98b144cbdfe1f5e48e1e61476a993aacd8b17c61", "emissions_count": 0}
+{"ts": "2026-02-24T03:22:16Z", "boot_ok": true, "proof_time": "2026-02-24T03:22:16Z", "ledger_sha": "TEST_LEDGER_1771903336", "emissions_count": 1, "test": true}
+{"ts": "2026-02-24T03:16:52Z", "boot_ok": true, "proof_time": "2026-02-24T03:16:52Z", "ledger_sha": "TEST_LEDGER_1771903012", "emissions_count": 1, "test": true}

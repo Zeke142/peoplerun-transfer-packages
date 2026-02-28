@@ -1,0 +1,9 @@
+{
+    "ok": true,
+    "result": {
+        "ok": false,
+        "queued": false,
+        "job_id": null,
+        "error": "emitter-ultra-safe"
+    }
+}
