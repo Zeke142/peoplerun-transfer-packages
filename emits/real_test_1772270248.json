@@ -1,0 +1,11 @@
+{
+    "execution": {
+        "run_id": "real_test_1772270248",
+        "mode": "test"
+    },
+    "artifacts": {
+        "files": [
+            "\/tmp\/verify.txt"
+        ]
+    }
+}
