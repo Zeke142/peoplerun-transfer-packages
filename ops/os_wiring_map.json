@@ -1,0 +1,71 @@
+{
+  "name": "PeopleRun OS Wiring Map",
+  "version": "1.0",
+  "generated_utc": "2026-03-03T00:40:43Z",
+  "authority_sha10": "0c63ca791b",
+  "layers": [
+    {
+      "id": "wordpress_runtime",
+      "name": "WordPress Runtime",
+      "root_path": "/home/customer/www/peoplerun.ai/public_html",
+      "role": "execution_surface",
+      "responsibilities": [
+        "renders_surfaces",
+        "executes_mu_plugins",
+        "triggers_runtime_tools",
+        "produces_state_pointers"
+      ],
+      "notable_paths": [
+        "/home/customer/www/peoplerun.ai/public_html/entry_surface/_latest.json",
+        "/home/customer/www/peoplerun.ai/public_html/wp-content/mu-plugins"
+      ]
+    },
+    {
+      "id": "runtime_workspace",
+      "name": "Runtime Workspace",
+      "root_path": "/home/u2282-2rsxvt9q8x9x/peoplerun-runtime",
+      "role": "state_and_ledgers",
+      "responsibilities": [
+        "boot_invariant_verification",
+        "append_only_ledgers",
+        "deterministic_state_storage",
+        "wiring_maps"
+      ],
+      "notable_paths": [
+        "/home/u2282-2rsxvt9q8x9x/peoplerun-runtime/state/boot_invariant_state.json",
+        "/home/u2282-2rsxvt9q8x9x/peoplerun-runtime/data/registry.jsonl",
+        "/home/u2282-2rsxvt9q8x9x/peoplerun-runtime/build_docs"
+      ]
+    },
+    {
+      "id": "github_shipyard",
+      "name": "GitHub Shipyard",
+      "root_path": "https://github.com/Zeke142/peoplerun-transfer-packages",
+      "role": "versioned_source_of_truth",
+      "responsibilities": [
+        "stores_canonical_code",
+        "tracks_history",
+        "hosts_transfer_packages",
+        "receives_emits_from_runtime"
+      ]
+    }
+  ],
+  "contracts": {
+    "registry": {
+      "path": "/home/u2282-2rsxvt9q8x9x/peoplerun-runtime/data/registry.jsonl",
+      "policy": "append_only",
+      "purpose": "memory_spine_linking_layers"
+    },
+    "boot_invariant": {
+      "manual_path": "/system_map/manuals/runtime_boot_invariant.md",
+      "state_path": "/home/u2282-2rsxvt9q8x9x/peoplerun-runtime/state/boot_invariant_state.json",
+      "acceptance": [
+        "HTTP_200",
+        "WP_blogname_PeopleRun_AI",
+        "DB_ok",
+        "authority_sha10_matches",
+        "emitter_token_present"
+      ]
+    }
+  }
+}
