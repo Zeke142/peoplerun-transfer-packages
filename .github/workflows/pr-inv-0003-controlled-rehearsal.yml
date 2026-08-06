@@ -1,0 +1,69 @@
+name: PR-INV-0003 controlled internal rehearsal
+on:
+  pull_request:
+    paths:
+      - 'pr-inv-0003-rehearsal/**'
+permissions:
+  contents: read
+jobs:
+  rehearsal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode exact candidate and assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd pr-inv-0003-rehearsal
+          mkdir -p artifacts assets fixture output
+          cat artifacts/chunks/*.part | base64 -d > artifacts/workcards-service-proof-0.2.0-rc1.zip
+          python3 generate-proof-images.py
+          cp demo-fixture.php fixture/pr-inv-0003-demo-fixture.php
+          echo '947b1662f317e3e90f78d775ef7aed6ad0776335b6233291c51f09909b0e6fb5  artifacts/workcards-service-proof-0.2.0-rc1.zip' | sha256sum -c -
+      - name: Install runtime and browser
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y espeak-ng ffmpeg
+          cd pr-inv-0003-rehearsal
+          npm init -y
+          npm install --no-audit --no-fund @wp-playground/cli@3.1.46 playwright@1.57.0
+          npx playwright install --with-deps chromium
+      - name: Execute exact controlled rehearsal
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd pr-inv-0003-rehearsal
+          node run-rehearsal.mjs
+      - name: Generate exact-script narration and mux evidence video
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd pr-inv-0003-rehearsal
+          if [ -f output/controlled-rehearsal-screen-only.webm ]; then
+            espeak-ng -v en-us -s 125 -f narration.txt -w output/narration-source.wav
+            SRC_DUR=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 output/narration-source.wav)
+            FACTOR=$(python3 -c "print(float('$SRC_DUR')/120.0)")
+            ffmpeg -y -i output/narration-source.wav -filter:a "atempo=${FACTOR},apad=pad_dur=120,atrim=duration=120" output/exact-script-narration.wav
+            ffmpeg -y -i output/controlled-rehearsal-screen-only.webm -i output/exact-script-narration.wav -c:v libx264 -pix_fmt yuv420p -c:a aac -shortest output/controlled-rehearsal-with-exact-script.mp4
+            sha256sum output/controlled-rehearsal-with-exact-script.mp4 > output/controlled-rehearsal-with-exact-script.mp4.sha256
+            python3 finalize-receipt.py
+          fi
+      - name: Hash retained evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd pr-inv-0003-rehearsal/output
+          find . -type f ! -name SHA256SUMS.txt -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
+      - name: Upload retained rehearsal evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PR-INV-0003-internal-rehearsal-evidence
+          path: pr-inv-0003-rehearsal/output
+          if-no-files-found: error
+          retention-days: 30
