@@ -2,7 +2,7 @@ name: MC05 Publish Immutable Envelope
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "mc05-nonprod-20260913-001"]
     paths:
       - "ops/mc05/invocations/**/release-manifest.json"
 
