@@ -1,0 +1,17 @@
+{
+  "schema": "peoplerun.mc05.production_path_contract.v1",
+  "status": "BUILT_MACHINE_VALIDATED_NOT_ACTIVATED",
+  "source": "ops/mc05/production/invocations/<operation_id>/",
+  "publication": "GitHub immutable non-draft non-prerelease release",
+  "discovery": "https://api.github.com/repos/Zeke142/peoplerun-transfer-packages/releases/latest",
+  "device_component": "mc05_production_discovery_v1.py",
+  "receiver": "existing PeopleRun Generic Offline Storage Receiver v3",
+  "safety": {
+    "no_overwrite": true,
+    "automatic_retry": false,
+    "prerelease_rejected": true,
+    "operation_release_mismatch_rejected": true,
+    "destination_selection_by_device": false
+  },
+  "activation": "NOT_PERFORMED"
+}
