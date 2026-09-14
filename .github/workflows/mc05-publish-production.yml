@@ -207,7 +207,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          mapfile -t manifests < <(git diff-tree --no-commit-id --diff-filter=A --name-only -r "${GITHUB_SHA}" | grep -E '^ops/mc05/production/invocations/[^/]+/release-manifest\.json$' || true)
+          mapfile -t manifests < <(git diff-tree -m --first-parent --no-commit-id --diff-filter=A --name-only -r "${GITHUB_SHA}" | grep -E '^ops/mc05/production/invocations/[^/]+/release-manifest\.json$' || true)
           test "${#manifests[@]}" -eq 1
           manifest="${manifests[0]}"
           dir="$(dirname "$manifest")"
