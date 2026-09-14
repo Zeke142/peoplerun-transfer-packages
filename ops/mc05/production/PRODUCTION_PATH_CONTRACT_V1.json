@@ -1,9 +1,23 @@
 {
   "schema": "peoplerun.mc05.production_path_contract.v1",
-  "status": "BUILT_MACHINE_VALIDATED_NOT_ACTIVATED",
+  "status": "ACTIVE_PENDING_DEVICE_PASS_NOTIFICATION_REPAIR",
   "source": "ops/mc05/production/invocations/<operation_id>/",
   "publication": "GitHub immutable non-draft non-prerelease release",
   "discovery": "https://github.com/Zeke142/peoplerun-transfer-packages/releases/latest/download/invocation.json",
+  "wake": {
+    "provider": "GitHub issue notification",
+    "issue_number": 12,
+    "issue_title": "MC05 production invocation",
+    "sender": "notifications@github.com",
+    "publisher_actor": "github-actions[bot]",
+    "binding": [
+      "operation_id",
+      "invocation_sha256"
+    ],
+    "duplicate_emission": "PROHIBITED",
+    "automatic_retry": false,
+    "corrective_wake": "manual workflow_dispatch for one existing immutable production operation"
+  },
   "device_component": "existing shortcut native HTTPS fetch chain",
   "receiver": "existing PeopleRun Generic Offline Storage Receiver v3",
   "safety": {
@@ -11,7 +25,8 @@
     "automatic_retry": false,
     "prerelease_rejected": true,
     "operation_release_mismatch_rejected_by_publisher": true,
-    "destination_selection_by_device": false
+    "destination_selection_by_device": false,
+    "success_requires_readback_verified_placement": true
   },
-  "activation": "NOT_PERFORMED"
+  "activation": "PENDING_ONE_ACTION_DEVICE_REPAIR_AND_CORRECTIVE_WAKE"
 }
