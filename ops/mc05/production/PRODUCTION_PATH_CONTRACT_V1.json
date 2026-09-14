@@ -1,20 +1,21 @@
 {
   "schema": "peoplerun.mc05.production_path_contract.v1",
-  "status": "ACTIVE_PENDING_DEVICE_PASS_NOTIFICATION_REPAIR",
+  "status": "ACTIVE_PENDING_FRESH_ISSUE_WAKE_PROOF",
   "source": "ops/mc05/production/invocations/<operation_id>/",
   "publication": "GitHub immutable non-draft non-prerelease release",
   "discovery": "https://github.com/Zeke142/peoplerun-transfer-packages/releases/latest/download/invocation.json",
   "wake": {
-    "provider": "GitHub issue notification",
-    "issue_number": 12,
-    "issue_title": "MC05 production invocation",
+    "provider": "GitHub unique issue notification",
+    "issue_lifecycle": "one fresh issue per immutable production operation",
+    "issue_title": "MC05 production invocation <operation_id>",
     "sender": "notifications@github.com",
     "publisher_actor": "github-actions[bot]",
     "binding": [
       "operation_id",
       "invocation_sha256"
     ],
-    "duplicate_emission": "PROHIBITED",
+    "duplicate_emission": "PROHIBITED_BY_EXACT_OPERATION_TITLE",
+    "thread_reuse": "PROHIBITED",
     "automatic_retry": false,
     "corrective_wake": "manual workflow_dispatch for one existing immutable production operation"
   },
@@ -28,5 +29,5 @@
     "destination_selection_by_device": false,
     "success_requires_readback_verified_placement": true
   },
-  "activation": "PENDING_ONE_ACTION_DEVICE_REPAIR_AND_CORRECTIVE_WAKE"
+  "activation": "PENDING_ONE_CORRECTIVE_WAKE_AND_OPERATIONAL_PROOF"
 }
