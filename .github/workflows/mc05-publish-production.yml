@@ -75,6 +75,13 @@ jobs:
               assert len(title) <= 256
               return title
 
+          def validate_existing_issue(issue, expected_title):
+              assert set(issue) == {"number", "title", "state", "user"}
+              assert isinstance(issue["number"], int) and issue["number"] > 0
+              assert issue["title"] == expected_title
+              assert issue["state"] == "open"
+              assert issue["user"] == {"login": "github-actions[bot]"}
+
           op = "mc05-prod-20260914-contract-fixture-v1"
           good = {
               "schema": "peoplerun.mc05.shortcut_input.v2",
@@ -154,8 +161,34 @@ jobs:
               else:
                   raise AssertionError("invalid activation marker accepted")
 
-          assert checks == 25
-          print("MC05 production wake contract tests: 25/25 PASS")
+          expected_title = wake_title(op)
+          existing_issue = {
+              "number": 17,
+              "title": expected_title,
+              "state": "open",
+              "user": {"login": "github-actions[bot]"},
+          }
+          validate_existing_issue(existing_issue, expected_title)
+          checks += 1
+          issue_mutations = [
+              lambda x: x.__setitem__("number", 0),
+              lambda x: x.__setitem__("title", "wrong"),
+              lambda x: x.__setitem__("state", "closed"),
+              lambda x: x.__setitem__("user", {"login": "Zeke142"}),
+              lambda x: x.__setitem__("extra", True),
+          ]
+          for mutate in issue_mutations:
+              candidate = copy.deepcopy(existing_issue)
+              mutate(candidate)
+              try:
+                  validate_existing_issue(candidate, expected_title)
+              except AssertionError:
+                  checks += 1
+              else:
+                  raise AssertionError("invalid existing issue accepted")
+
+          assert checks == 31
+          print("MC05 production wake contract tests: 31/31 PASS")
           PY
 
   publish:
@@ -277,7 +310,7 @@ jobs:
           marker="<!-- mc05-production-wake-v2 operation_id=$OPERATION_ID invocation_sha256=$invocation_sha -->"
           wake_title="${MC05_WAKE_TITLE_PREFIX} ${OPERATION_ID}"
           test "${#wake_title}" -le 256
-          matches="$(gh issue list --state all --limit 1000 --json number,title,state,author --jq "[.[] | select(.title == \"$wake_title\")]")"
+          matches="$(gh issue list --state all --limit 1000 --json number,title --jq "[.[] | select(.title == \"$wake_title\")]")"
           match_count="$(jq 'length' <<<"$matches")"
           if [ "$match_count" = "0" ]; then
             issue_url="$(gh issue create \
@@ -287,8 +320,8 @@ jobs:
             issue_number="${issue_url##*/}"
           elif [ "$match_count" = "1" ]; then
             issue_number="$(jq -r '.[0].number' <<<"$matches")"
-            test "$(jq -r '.[0].state' <<<"$matches")" = "OPEN"
-            test "$(jq -r '.[0].author.login' <<<"$matches")" = "github-actions[bot]"
+            issue_identity="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${issue_number}" --jq '[.state,.user.login] | join("|")')"
+            test "$issue_identity" = "open|github-actions[bot]"
           else
             echo "Multiple wake records exist for one operation; refusing ambiguous activation."
             exit 1
@@ -301,4 +334,3 @@ jobs:
             exit 1
           fi
           gh issue comment "$issue_number" --body "$(printf '%s\n\n%s\n%s\n%s\n' "$activation_marker" '@Zeke142' "Operation: $OPERATION_ID" 'Machine-issued corrective production wake. Do not edit or replay.')"
-
