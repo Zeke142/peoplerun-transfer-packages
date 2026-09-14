@@ -1,0 +1,74 @@
+name: MC05 Publish Production Envelope
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "ops/mc05/production/invocations/**/release-manifest.json"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact production issuance commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Validate and publish one production release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mapfile -t manifests < <(git diff-tree --no-commit-id --diff-filter=A --name-only -r "${GITHUB_SHA}" | grep -E '^ops/mc05/production/invocations/[^/]+/release-manifest\.json$' || true)
+          test "${#manifests[@]}" -eq 1
+          manifest="${manifests[0]}"
+          dir="$(dirname "$manifest")"
+          test -f "$dir/envelope.zip"
+          test -f "$dir/invocation.json"
+          test -f "$dir/envelope_receipt.json"
+          test -f "$dir/ENVELOPE.sha256"
+          operation_id="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["operation_id"])' "$manifest")"
+          release_tag="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["release_tag"])' "$manifest")"
+          production="$(python3 -c 'import json,sys; print(str(json.load(open(sys.argv[1]))["production"]).lower())' "$manifest")"
+          test "$production" = "true"
+          test "$operation_id" = "$release_tag"
+          test "$dir" = "ops/mc05/production/invocations/$operation_id"
+          python3 - "$dir/invocation.json" "$operation_id" <<'PY'
+          import json
+          import sys
+          from urllib.parse import urlsplit
+
+          invocation_path, operation_id = sys.argv[1:]
+          with open(invocation_path, encoding="utf-8") as handle:
+              invocation = json.load(handle)
+          required = {
+              "schema", "operation_id", "envelope_url",
+              "expected_envelope_sha256", "expected_envelope_size_bytes",
+              "envelope_receipt_sha256", "transport_event_id", "trigger_event_id",
+          }
+          assert set(invocation) == required
+          assert invocation["schema"] == "peoplerun.mc05.shortcut_input.v2"
+          assert invocation["operation_id"] == operation_id
+          expected_path = f"/Zeke142/peoplerun-transfer-packages/releases/download/{operation_id}/envelope.zip"
+          parsed = urlsplit(invocation["envelope_url"])
+          assert parsed.scheme == "https" and parsed.hostname == "github.com"
+          assert parsed.path == expected_path and not parsed.query and not parsed.fragment
+          PY
+          (cd "$dir" && sha256sum -c ENVELOPE.sha256)
+          if gh release view "$release_tag" >/dev/null 2>&1; then
+            echo "Release already exists; refusing overwrite or retry."
+            exit 1
+          fi
+          gh release create "$release_tag" \
+            "$dir/envelope.zip#envelope.zip" \
+            "$dir/invocation.json#invocation.json" \
+            "$dir/envelope_receipt.json#envelope_receipt.json" \
+            --target "${GITHUB_SHA}" \
+            --title "MC05 production invocation $operation_id" \
+            --notes "One governed production MC05 invocation. No automatic retry." \
+            --latest
