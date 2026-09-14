@@ -1,6 +1,6 @@
 {
   "schema": "peoplerun.mc05.production_path_contract.v1",
-  "status": "ACTIVE_PENDING_FRESH_ISSUE_WAKE_PROOF",
+  "status": "ACTIVE_PENDING_FRESH_ISSUE_COMMENT_WAKE_PROOF",
   "source": "ops/mc05/production/invocations/<operation_id>/",
   "publication": "GitHub immutable non-draft non-prerelease release",
   "discovery": "https://github.com/Zeke142/peoplerun-transfer-packages/releases/latest/download/invocation.json",
@@ -8,13 +8,15 @@
     "provider": "GitHub unique issue notification",
     "issue_lifecycle": "one fresh issue per immutable production operation",
     "issue_title": "MC05 production invocation <operation_id>",
+    "wake_trigger": "one github-actions[bot] activation comment with @Zeke142 on the operation issue",
+    "issue_body_creation_accepted_as_wake": false,
     "sender": "notifications@github.com",
     "publisher_actor": "github-actions[bot]",
     "binding": [
       "operation_id",
       "invocation_sha256"
     ],
-    "duplicate_emission": "PROHIBITED_BY_EXACT_OPERATION_TITLE",
+    "duplicate_emission": "PROHIBITED_BY_EXACT_OPERATION_TITLE_AND_ACTIVATION_MARKER",
     "thread_reuse": "PROHIBITED",
     "automatic_retry": false,
     "corrective_wake": "manual workflow_dispatch for one existing immutable production operation"
