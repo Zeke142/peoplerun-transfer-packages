@@ -21,8 +21,8 @@ permissions:
   issues: write
 
 env:
-  MC05_WAKE_ISSUE: "12"
-  MC05_WAKE_TITLE: "MC05 production invocation"
+  MC05_WAKE_TITLE_PREFIX: "MC05 production invocation"
+  MC05_WAKE_ASSIGNEE: "Zeke142"
 
 jobs:
   contract-tests:
@@ -62,7 +62,13 @@ jobs:
           def marker(operation_id, invocation_sha):
               assert re.fullmatch(r"[A-Za-z0-9._-]+", operation_id)
               assert re.fullmatch(r"[0-9a-f]{64}", invocation_sha)
-              return f"<!-- mc05-production-wake-v1 operation_id={operation_id} invocation_sha256={invocation_sha} -->"
+              return f"<!-- mc05-production-wake-v2 operation_id={operation_id} invocation_sha256={invocation_sha} -->"
+
+          def wake_title(operation_id):
+              assert re.fullmatch(r"[A-Za-z0-9._-]+", operation_id)
+              title = f"MC05 production invocation {operation_id}"
+              assert len(title) <= 256
+              return title
 
           op = "mc05-prod-20260914-contract-fixture-v1"
           good = {
@@ -112,6 +118,9 @@ jobs:
           assert wake == marker(op, "c" * 64)
           assert wake != marker(op, "d" * 64)
           checks += 2
+          assert wake_title(op) == f"MC05 production invocation {op}"
+          assert wake_title(op) != wake_title(op + "-next")
+          checks += 2
           try:
               marker("invalid operation", "c" * 64)
           except AssertionError:
@@ -119,8 +128,16 @@ jobs:
           else:
               raise AssertionError("invalid operation marker accepted")
 
-          assert checks == 16
-          print("MC05 production wake contract tests: 16/16 PASS")
+          for invalid in ("invalid operation", "x" * 230):
+              try:
+                  wake_title(invalid)
+              except AssertionError:
+                  checks += 1
+              else:
+                  raise AssertionError("invalid wake title accepted")
+
+          assert checks == 20
+          print("MC05 production wake contract tests: 20/20 PASS")
           PY
 
   publish:
@@ -193,12 +210,15 @@ jobs:
             --notes "One governed production MC05 invocation. No automatic retry." \
             --latest
           invocation_sha="$(sha256sum "$dir/invocation.json" | awk '{print $1}')"
-          marker="<!-- mc05-production-wake-v1 operation_id=$operation_id invocation_sha256=$invocation_sha -->"
-          issue_state="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${MC05_WAKE_ISSUE}" --jq '[.title,.state] | join("|")')"
-          test "$issue_state" = "${MC05_WAKE_TITLE}|open"
-          existing="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${MC05_WAKE_ISSUE}/comments" --jq ".[] | select(.body | contains(\"$marker\")) | .id" | wc -l | tr -d ' ')"
+          marker="<!-- mc05-production-wake-v2 operation_id=$operation_id invocation_sha256=$invocation_sha -->"
+          wake_title="${MC05_WAKE_TITLE_PREFIX} ${operation_id}"
+          test "${#wake_title}" -le 256
+          existing="$(gh issue list --state all --limit 1000 --json title --jq "[.[] | select(.title == \"$wake_title\")] | length")"
           test "$existing" = "0"
-          gh issue comment "$MC05_WAKE_ISSUE" --body "$(printf '%s\n\n%s\n%s\n%s\n' "$marker" '@Zeke142' "Operation: $operation_id" "Invocation SHA-256: $invocation_sha")"
+          gh issue create \
+            --title "$wake_title" \
+            --assignee "$MC05_WAKE_ASSIGNEE" \
+            --body "$(printf '%s\n\n%s\n%s\n%s\n%s\n' "$marker" '@Zeke142' "Operation: $operation_id" "Invocation SHA-256: $invocation_sha" 'Machine-issued production wake. Do not edit or replay.')"
 
   corrective-wake:
     if: github.event_name == 'workflow_dispatch'
@@ -229,13 +249,17 @@ jobs:
           test "$invocation_operation" = "$OPERATION_ID"
           release_state="$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${OPERATION_ID}" --jq '[.tag_name,.draft,.prerelease] | map(tostring) | join("|")')"
           test "$release_state" = "${OPERATION_ID}|false|false"
-          issue_state="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${MC05_WAKE_ISSUE}" --jq '[.title,.state] | join("|")')"
-          test "$issue_state" = "${MC05_WAKE_TITLE}|open"
           invocation_sha="$(sha256sum "$dir/invocation.json" | awk '{print $1}')"
-          marker="<!-- mc05-production-wake-v1 operation_id=$OPERATION_ID invocation_sha256=$invocation_sha -->"
-          existing="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${MC05_WAKE_ISSUE}/comments" --jq ".[] | select(.body | contains(\"$marker\")) | .id" | wc -l | tr -d ' ')"
+          marker="<!-- mc05-production-wake-v2 operation_id=$OPERATION_ID invocation_sha256=$invocation_sha -->"
+          wake_title="${MC05_WAKE_TITLE_PREFIX} ${OPERATION_ID}"
+          test "${#wake_title}" -le 256
+          existing="$(gh issue list --state all --limit 1000 --json title --jq "[.[] | select(.title == \"$wake_title\")] | length")"
           if [ "$existing" != "0" ]; then
-            echo "Wake already emitted for this exact operation and invocation; refusing duplicate."
-            exit 1
+              echo "Wake already emitted for this exact operation and invocation; refusing duplicate."
+              exit 1
           fi
-          gh issue comment "$MC05_WAKE_ISSUE" --body "$(printf '%s\n\n%s\n%s\n%s\n' "$marker" '@Zeke142' "Operation: $OPERATION_ID" "Invocation SHA-256: $invocation_sha")"
+          gh issue create \
+            --title "$wake_title" \
+            --assignee "$MC05_WAKE_ASSIGNEE" \
+            --body "$(printf '%s\n\n%s\n%s\n%s\n%s\n' "$marker" '@Zeke142' "Operation: $OPERATION_ID" "Invocation SHA-256: $invocation_sha" 'Machine-issued corrective production wake. Do not edit or replay.')"
+
