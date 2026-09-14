@@ -1,16 +1,131 @@
 name: MC05 Publish Production Envelope
 
 on:
+  pull_request:
+    paths:
+      - ".github/workflows/mc05-publish-production.yml"
+      - "ops/mc05/production/PRODUCTION_PATH_CONTRACT_V1.json"
   push:
     branches: ["main"]
     paths:
       - "ops/mc05/production/invocations/**/release-manifest.json"
+  workflow_dispatch:
+    inputs:
+      operation_id:
+        description: "Existing immutable production operation to wake exactly once"
+        required: true
+        type: string
 
 permissions:
   contents: write
+  issues: write
+
+env:
+  MC05_WAKE_ISSUE: "12"
+  MC05_WAKE_TITLE: "MC05 production invocation"
 
 jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test production invocation and wake contracts
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import copy
+          import re
+          from urllib.parse import urlsplit
+
+          REQUIRED = {
+              "schema", "operation_id", "envelope_url",
+              "expected_envelope_sha256", "expected_envelope_size_bytes",
+              "envelope_receipt_sha256", "transport_event_id", "trigger_event_id",
+          }
+
+          def validate(invocation, operation_id, release_tag, production):
+              assert production is True
+              assert operation_id == release_tag
+              assert set(invocation) == REQUIRED
+              assert invocation["schema"] == "peoplerun.mc05.shortcut_input.v2"
+              assert invocation["operation_id"] == operation_id
+              assert re.fullmatch(r"[0-9a-f]{64}", invocation["expected_envelope_sha256"])
+              assert re.fullmatch(r"[0-9a-f]{64}", invocation["envelope_receipt_sha256"])
+              assert isinstance(invocation["expected_envelope_size_bytes"], int)
+              assert invocation["expected_envelope_size_bytes"] > 0
+              parsed = urlsplit(invocation["envelope_url"])
+              expected_path = f"/Zeke142/peoplerun-transfer-packages/releases/download/{operation_id}/envelope.zip"
+              assert parsed.scheme == "https"
+              assert parsed.hostname == "github.com"
+              assert parsed.path == expected_path
+              assert not parsed.query and not parsed.fragment
+
+          def marker(operation_id, invocation_sha):
+              assert re.fullmatch(r"[A-Za-z0-9._-]+", operation_id)
+              assert re.fullmatch(r"[0-9a-f]{64}", invocation_sha)
+              return f"<!-- mc05-production-wake-v1 operation_id={operation_id} invocation_sha256={invocation_sha} -->"
+
+          op = "mc05-prod-20260914-contract-fixture-v1"
+          good = {
+              "schema": "peoplerun.mc05.shortcut_input.v2",
+              "operation_id": op,
+              "envelope_url": f"https://github.com/Zeke142/peoplerun-transfer-packages/releases/download/{op}/envelope.zip",
+              "expected_envelope_sha256": "a" * 64,
+              "expected_envelope_size_bytes": 123,
+              "envelope_receipt_sha256": "b" * 64,
+              "transport_event_id": "fixture-transport",
+              "trigger_event_id": "fixture-trigger",
+          }
+
+          checks = 0
+          validate(good, op, op, True)
+          checks += 1
+
+          mutations = [
+              ("production_false", lambda x: validate(x, op, op, False)),
+              ("release_mismatch", lambda x: validate(x, op, "wrong", True)),
+              ("schema", lambda x: x.__setitem__("schema", "wrong")),
+              ("operation", lambda x: x.__setitem__("operation_id", "wrong")),
+              ("host", lambda x: x.__setitem__("envelope_url", x["envelope_url"].replace("github.com", "example.com"))),
+              ("path", lambda x: x.__setitem__("envelope_url", x["envelope_url"].replace("envelope.zip", "wrong.zip"))),
+              ("query", lambda x: x.__setitem__("envelope_url", x["envelope_url"] + "?x=1")),
+              ("fragment", lambda x: x.__setitem__("envelope_url", x["envelope_url"] + "#x")),
+              ("sha", lambda x: x.__setitem__("expected_envelope_sha256", "bad")),
+              ("receipt_sha", lambda x: x.__setitem__("envelope_receipt_sha256", "bad")),
+              ("size", lambda x: x.__setitem__("expected_envelope_size_bytes", 0)),
+              ("extra", lambda x: x.__setitem__("unexpected", True)),
+          ]
+          for name, mutate in mutations:
+              candidate = copy.deepcopy(good)
+              failed = False
+              try:
+                  if name in {"production_false", "release_mismatch"}:
+                      mutate(candidate)
+                  else:
+                      mutate(candidate)
+                      validate(candidate, op, op, True)
+              except AssertionError:
+                  failed = True
+              assert failed, f"mutation was accepted: {name}"
+              checks += 1
+
+          wake = marker(op, "c" * 64)
+          assert wake == marker(op, "c" * 64)
+          assert wake != marker(op, "d" * 64)
+          checks += 2
+          try:
+              marker("invalid operation", "c" * 64)
+          except AssertionError:
+              checks += 1
+          else:
+              raise AssertionError("invalid operation marker accepted")
+
+          assert checks == 16
+          print("MC05 production wake contract tests: 16/16 PASS")
+          PY
+
   publish:
+    if: github.event_name == 'push'
+    needs: contract-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout exact production issuance commit
@@ -18,7 +133,7 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Validate and publish one production release
+      - name: Validate, publish, and wake once
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -40,6 +155,7 @@ jobs:
           test "$dir" = "ops/mc05/production/invocations/$operation_id"
           python3 - "$dir/invocation.json" "$operation_id" <<'PY'
           import json
+          import re
           import sys
           from urllib.parse import urlsplit
 
@@ -54,6 +170,10 @@ jobs:
           assert set(invocation) == required
           assert invocation["schema"] == "peoplerun.mc05.shortcut_input.v2"
           assert invocation["operation_id"] == operation_id
+          assert re.fullmatch(r"[0-9a-f]{64}", invocation["expected_envelope_sha256"])
+          assert re.fullmatch(r"[0-9a-f]{64}", invocation["envelope_receipt_sha256"])
+          assert isinstance(invocation["expected_envelope_size_bytes"], int)
+          assert invocation["expected_envelope_size_bytes"] > 0
           expected_path = f"/Zeke142/peoplerun-transfer-packages/releases/download/{operation_id}/envelope.zip"
           parsed = urlsplit(invocation["envelope_url"])
           assert parsed.scheme == "https" and parsed.hostname == "github.com"
@@ -72,3 +192,50 @@ jobs:
             --title "MC05 production invocation $operation_id" \
             --notes "One governed production MC05 invocation. No automatic retry." \
             --latest
+          invocation_sha="$(sha256sum "$dir/invocation.json" | awk '{print $1}')"
+          marker="<!-- mc05-production-wake-v1 operation_id=$operation_id invocation_sha256=$invocation_sha -->"
+          issue_state="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${MC05_WAKE_ISSUE}" --jq '[.title,.state] | join("|")')"
+          test "$issue_state" = "${MC05_WAKE_TITLE}|open"
+          existing="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${MC05_WAKE_ISSUE}/comments" --jq ".[] | select(.body | contains(\"$marker\")) | .id" | wc -l | tr -d ' ')"
+          test "$existing" = "0"
+          gh issue comment "$MC05_WAKE_ISSUE" --body "$(printf '%s\n\n%s\n%s\n%s\n' "$marker" '@Zeke142' "Operation: $operation_id" "Invocation SHA-256: $invocation_sha")"
+
+  corrective-wake:
+    if: github.event_name == 'workflow_dispatch'
+    needs: contract-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout active production state
+        uses: actions/checkout@v4
+
+      - name: Wake one existing immutable production operation
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OPERATION_ID: ${{ inputs.operation_id }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$OPERATION_ID" | grep -Eq '^[A-Za-z0-9._-]+$'
+          dir="ops/mc05/production/invocations/$OPERATION_ID"
+          test -f "$dir/release-manifest.json"
+          test -f "$dir/invocation.json"
+          manifest_operation="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["operation_id"])' "$dir/release-manifest.json")"
+          manifest_tag="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["release_tag"])' "$dir/release-manifest.json")"
+          manifest_production="$(python3 -c 'import json,sys; print(str(json.load(open(sys.argv[1]))["production"]).lower())' "$dir/release-manifest.json")"
+          invocation_operation="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["operation_id"])' "$dir/invocation.json")"
+          test "$manifest_operation" = "$OPERATION_ID"
+          test "$manifest_tag" = "$OPERATION_ID"
+          test "$manifest_production" = "true"
+          test "$invocation_operation" = "$OPERATION_ID"
+          release_state="$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${OPERATION_ID}" --jq '[.tag_name,.draft,.prerelease] | map(tostring) | join("|")')"
+          test "$release_state" = "${OPERATION_ID}|false|false"
+          issue_state="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${MC05_WAKE_ISSUE}" --jq '[.title,.state] | join("|")')"
+          test "$issue_state" = "${MC05_WAKE_TITLE}|open"
+          invocation_sha="$(sha256sum "$dir/invocation.json" | awk '{print $1}')"
+          marker="<!-- mc05-production-wake-v1 operation_id=$OPERATION_ID invocation_sha256=$invocation_sha -->"
+          existing="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${MC05_WAKE_ISSUE}/comments" --jq ".[] | select(.body | contains(\"$marker\")) | .id" | wc -l | tr -d ' ')"
+          if [ "$existing" != "0" ]; then
+            echo "Wake already emitted for this exact operation and invocation; refusing duplicate."
+            exit 1
+          fi
+          gh issue comment "$MC05_WAKE_ISSUE" --body "$(printf '%s\n\n%s\n%s\n%s\n' "$marker" '@Zeke142' "Operation: $OPERATION_ID" "Invocation SHA-256: $invocation_sha")"
